@@ -13,7 +13,6 @@ WORKDIR /app
 RUN apt-get update \
   && apt-get install -y libpq-dev gcc \
   && rm -rf /var/lib/apt/lists/*
-RUN uv sync --frozen --no-install-project --no-dev
 ADD . /app
 RUN uv sync --frozen --no-dev
 
